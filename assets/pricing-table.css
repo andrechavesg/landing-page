@@ -478,6 +478,7 @@ xkeyframes
 }
 .pricing-list{
     margin: 20px 0;
+    list-style-type: circle;
 }
 .pricing-list li{
     line-height: 30px;
