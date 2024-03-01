@@ -48,7 +48,7 @@ Main Components
     left: 2px;
     height: 45px;
     width: 120px;
-    background-color: #f22874;
+    background-color: #05144D;
     font-family: "Work Sans",sans-serif;
     color: #fff;
     border-radius: 2px;
@@ -494,7 +494,7 @@ xkeyframes
 /*price-tag
 =============*/
 .price-tag{
-    background-color: #f22874;
+    background-color: #05144D;
     padding: 10px 20px;
     color: #fff;
     font-family: "Work Sans",sans-serif;
