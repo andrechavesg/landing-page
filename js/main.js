@@ -83,4 +83,9 @@
         preventScrollOnTouch: "auto"
     });
 
+    $(".slicknav_btn").click((e) => {
+        e.preventDefault();
+        $(".slicknav_nav").toggle();
+    })
+
 })(jQuery);

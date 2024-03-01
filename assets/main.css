@@ -1079,7 +1079,8 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 .slicknav_nav {
     background-color: #fff;
     font-size: 16px;
-    padding: 20px 15px
+    padding: 20px 15px;
+    transition: 2s;
 }
 
 .js .slicknav_menu {
