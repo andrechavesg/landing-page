@@ -485,11 +485,11 @@ button {
 }
 
 .default-btn:hover {
-    color: #fff
+    color: #05144D
 }
 
 .default-btn span {
-    background: #0b0829 none repeat scroll 0 0;
+    background: #FAECB4 none repeat scroll 0 0;
     border-radius: 50%;
     display: block;
     height: 0;
@@ -833,7 +833,7 @@ a, a:hover, .overlay, img, .form-control, .form-control:hover, button {
 }
 
 .navbar-fixed-top ul.nav > li > a:hover, .navbar-fixed-top ul.nav > li > a:focus, .navbar-fixed-top ul.nav > li.active > a {
-    color: #263b5e
+    color: #FAECB4
 }
 
 .logo-light, .navbar-fixed-top .logo-light, .logo-dark, .navbar-fixed-top .logo-dark, .navbar-fixed-top.header-section, .header-section {
@@ -1047,7 +1047,7 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 }
 
 .header-section.transparent ul.nav > li > a:hover, .header-section.transparent ul.nav > li > a.active {
-    color: #fff
+    color: #FAECB4
 }
 
 .navbar-fixed-top.header-section.transparent ul.nav > li > a {
@@ -1157,7 +1157,7 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 
 .header-right .menu-btn {
     background-color: #05144D;
-    color: #fff !important;
+    color: #fff;
     padding: 0 30px;
     border-radius: 3px;
     line-height: 45px;
@@ -1171,7 +1171,7 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 
 .header-right .menu-btn:hover {
     opacity: .8;
-    color: #fff
+    color: #05144D
 }
 
 #dl-popup-search-box {
@@ -1501,7 +1501,7 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 }
 
 .team-info .team-social li:hover a {
-    color: #fff
+    color: #FAECB4
 }
 
 .team-info .team-social li:first-child {
@@ -1591,7 +1591,7 @@ ul.nav > li > a:hover, ul.nav > li > a:focus, ul.nav > li > a.active {
 
 .testi-content .rattings li i {
     font-size: 10px;
-    color: #05144D;
+    color: #FAECB4;
     display: inline-block
 }
 
@@ -2562,7 +2562,7 @@ blockquote span {
 }
 
 #scroll-to-top:hover {
-    background-color: #05144D;
-    color: #fff;
+    background-color: #FAECB4;
+    color: #05144D;
     opacity: .8
 }
