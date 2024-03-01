@@ -2566,3 +2566,28 @@ blockquote span {
     color: #05144D;
     opacity: .8
 }
+.tns-item {
+    margin-left:1em;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.tns-nav {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.tns-nav button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #555;
+    margin: 0 3px;
+    position: relative;
+    transition: all .3s linear
+}
+.tns-nav-active {
+    background:#FAECB4!important;
+}

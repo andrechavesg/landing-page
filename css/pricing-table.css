@@ -1,17 +1,18 @@
-
-/* -------------------------------- 
+/* --------------------------------
 
 Main Components 
 
 -------------------------------- */
 
 .cd-pricing-container {
-  width: 100%;
+    width: 100%;
 }
+
 .cd-pricing-switcher {
-  text-align: center;
+    text-align: center;
     margin-bottom: 35px;
 }
+
 .cd-pricing-switcher .fieldset {
     display: inline-block;
     position: relative;
@@ -19,12 +20,14 @@ Main Components
     background-color: #fff;
     margin-bottom: 0;
 }
+
 .cd-pricing-switcher input[type="radio"] {
-  position: absolute;
-  opacity: 0;
+    position: absolute;
+    opacity: 0;
 }
+
 .cd-pricing-switcher label {
-    font-family: "Work Sans",sans-serif;
+    font-family: "Work Sans", sans-serif;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -41,6 +44,7 @@ Main Components
     letter-spacing: 0.5px;
     margin: 0;
 }
+
 .cd-pricing-switcher .cd-switch {
     /* floating background */
     position: absolute;
@@ -49,7 +53,7 @@ Main Components
     height: 45px;
     width: 120px;
     background-color: #05144D;
-    font-family: "Work Sans",sans-serif;
+    font-family: "Work Sans", sans-serif;
     color: #fff;
     border-radius: 2px;
     text-transform: uppercase;
@@ -60,10 +64,12 @@ Main Components
     -moz-transition: -moz-transform 0.5s;
     transition: transform 0.5s;
 }
-.cd-pricing-switcher input[type="radio"]:checked + label{
+
+.cd-pricing-switcher input[type="radio"]:checked + label {
     color: #FAECB4;
     transition: 1s;
 }
+
 .cd-pricing-switcher input[type="radio"]:checked + label + .cd-switch,
 .cd-pricing-switcher input[type="radio"]:checked + label:nth-of-type(n) + .cd-switch {
     /* use label:nth-of-type(n) to fix a bug on safari with multiple adjacent-sibling selectors*/
@@ -78,30 +84,38 @@ Main Components
     display: none;
 }
 
-.cd-pricing-list {}
+.cd-pricing-list {
+}
+
 .cd-pricing-list > li {
     position: relative;
     margin-bottom: 1em;
 }
+
 @media only screen and (min-width: 768px) {
-  .cd-pricing-list {}
-  .cd-pricing-list:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .cd-pricing-list > li {
-    width: 50%;
-    float: left;
-  }
-  .cd-has-margins .cd-pricing-list > li {
-    width: 32.3333333333%;
-    float: left;
-    margin-right: 1.5%;
-  }
-  .cd-has-margins .cd-pricing-list > li:last-of-type {
-    margin-right: 0;
-  }
+    .cd-pricing-list {
+    }
+
+    .cd-pricing-list:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .cd-pricing-list > li {
+        width: 50%;
+        float: left;
+    }
+
+    .cd-has-margins .cd-pricing-list > li {
+        width: 32.3333333333%;
+        float: left;
+        margin-right: 1.5%;
+    }
+
+    .cd-has-margins .cd-pricing-list > li:last-of-type {
+        margin-right: 0;
+    }
 }
 
 .cd-pricing-wrapper {
@@ -109,12 +123,14 @@ Main Components
     position: relative;
     margin: 10px;
 }
+
 .touch .cd-pricing-wrapper {
     /* fix a bug on IOS8 - rotating elements dissapear*/
     -webkit-perspective: 2000px;
     -moz-perspective: 2000px;
     perspective: 2000px;
 }
+
 .cd-pricing-wrapper.is-switched .is-visible {
     /* totate the tables - anticlockwise rotation */
     -webkit-transform: rotateY(180deg);
@@ -126,6 +142,7 @@ Main Components
     -moz-animation: cd-rotate 0.5s;
     animation: cd-rotate 0.5s;
 }
+
 .cd-pricing-wrapper.is-switched .is-hidden {
     /* totate the tables - anticlockwise rotation */
     -webkit-transform: rotateY(0);
@@ -138,9 +155,11 @@ Main Components
     animation: cd-rotate-inverse 0.5s;
     opacity: 0;
 }
+
 .cd-pricing-wrapper.is-switched .is-selected {
-  opacity: 1;
+    opacity: 1;
 }
+
 .cd-pricing-wrapper.is-switched.reverse-animation .is-visible {
     /* invert rotation direction - clockwise rotation */
     -webkit-transform: rotateY(-180deg);
@@ -152,6 +171,7 @@ Main Components
     -moz-animation: cd-rotate-back 0.5s;
     animation: cd-rotate-back 0.5s;
 }
+
 .cd-pricing-wrapper.is-switched.reverse-animation .is-hidden {
     /* invert rotation direction - clockwise rotation */
     -webkit-transform: rotateY(0);
@@ -164,9 +184,11 @@ Main Components
     animation: cd-rotate-inverse-back 0.5s;
     opacity: 0;
 }
+
 .cd-pricing-wrapper.is-switched.reverse-animation .is-selected {
     opacity: 1;
 }
+
 .cd-pricing-wrapper > li {
     background-color: #FFFFFF;
     -webkit-backface-visibility: hidden;
@@ -174,6 +196,7 @@ Main Components
     /* Firefox bug - 3D CSS transform, jagged edges */
     outline: 1px solid transparent;
 }
+
 .cd-pricing-wrapper > li::after {
     /* subtle gradient layer on the right - to indicate it's possible to scroll */
     content: '';
@@ -184,15 +207,18 @@ Main Components
     width: 50px;
     pointer-events: none;
 }
+
 .cd-pricing-wrapper > li.is-ended::after {
     /* class added in jQuery - remove the gradient layer when it's no longer possible to scroll */
     display: none;
 }
+
 .cd-pricing-wrapper .is-visible {
     /* the front item, visible by default */
     position: relative;
     z-index: 5;
 }
+
 .cd-pricing-wrapper .is-hidden {
     /* the hidden items, right behind the front one */
     position: absolute;
@@ -207,27 +233,33 @@ Main Components
     -o-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
+
 .cd-pricing-wrapper .is-selected {
     /* the next item that will be visible */
     z-index: 3 !important;
 }
+
 @media only screen and (min-width: 768px) {
 }
+
 :nth-of-type(1) > .cd-pricing-wrapper > li::before {
     /* hide table separator for the first table */
     display: none;
-  }
+}
+
 .cd-has-margins .cd-pricing-wrapper > li {
     border-radius: 4px 4px 6px 6px;
-  }
+}
+
 .cd-has-margins .cd-pricing-wrapper > li::before {
     display: none;
-  }
 }
+
+
 @media only screen and (min-width: 1500px) {
-  .cd-full-width .cd-pricing-wrapper > li {
-    padding: 2.5em 0;
-  }
+    .cd-full-width .cd-pricing-wrapper > li {
+        padding: 2.5em 0;
+    }
 }
 
 .no-js .cd-pricing-wrapper .is-hidden {
@@ -244,261 +276,283 @@ Main Components
     /* fix a bug on Chrome Android */
     overflow: hidden;
 }
-/* -------------------------------- 
+
+/* --------------------------------
 
 xkeyframes 
 
 -------------------------------- */
 @-webkit-keyframes cd-rotate {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(200deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(180deg);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(200deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(180deg);
+    }
 }
+
 @-moz-keyframes cd-rotate {
-  0% {
-    -moz-transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -moz-transform: perspective(2000px) rotateY(200deg);
-  }
-  100% {
-    -moz-transform: perspective(2000px) rotateY(180deg);
-  }
+    0% {
+        -moz-transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -moz-transform: perspective(2000px) rotateY(200deg);
+    }
+    100% {
+        -moz-transform: perspective(2000px) rotateY(180deg);
+    }
 }
+
 @keyframes cd-rotate {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-    -moz-transform: perspective(2000px) rotateY(0);
-    -ms-transform: perspective(2000px) rotateY(0);
-    -o-transform: perspective(2000px) rotateY(0);
-    transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(200deg);
-    -moz-transform: perspective(2000px) rotateY(200deg);
-    -ms-transform: perspective(2000px) rotateY(200deg);
-    -o-transform: perspective(2000px) rotateY(200deg);
-    transform: perspective(2000px) rotateY(200deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(180deg);
-    -moz-transform: perspective(2000px) rotateY(180deg);
-    -ms-transform: perspective(2000px) rotateY(180deg);
-    -o-transform: perspective(2000px) rotateY(180deg);
-    transform: perspective(2000px) rotateY(180deg);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+        -moz-transform: perspective(2000px) rotateY(0);
+        -ms-transform: perspective(2000px) rotateY(0);
+        -o-transform: perspective(2000px) rotateY(0);
+        transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(200deg);
+        -moz-transform: perspective(2000px) rotateY(200deg);
+        -ms-transform: perspective(2000px) rotateY(200deg);
+        -o-transform: perspective(2000px) rotateY(200deg);
+        transform: perspective(2000px) rotateY(200deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(180deg);
+        -moz-transform: perspective(2000px) rotateY(180deg);
+        -ms-transform: perspective(2000px) rotateY(180deg);
+        -o-transform: perspective(2000px) rotateY(180deg);
+        transform: perspective(2000px) rotateY(180deg);
+    }
 }
+
 @-webkit-keyframes cd-rotate-inverse {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(-180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(20deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(-180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(20deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+    }
 }
+
 @-moz-keyframes cd-rotate-inverse {
-  0% {
-    -moz-transform: perspective(2000px) rotateY(-180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -moz-transform: perspective(2000px) rotateY(20deg);
-  }
-  100% {
-    -moz-transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -moz-transform: perspective(2000px) rotateY(-180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -moz-transform: perspective(2000px) rotateY(20deg);
+    }
+    100% {
+        -moz-transform: perspective(2000px) rotateY(0);
+    }
 }
+
 @keyframes cd-rotate-inverse {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(-180deg);
-    -moz-transform: perspective(2000px) rotateY(-180deg);
-    -ms-transform: perspective(2000px) rotateY(-180deg);
-    -o-transform: perspective(2000px) rotateY(-180deg);
-    transform: perspective(2000px) rotateY(-180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(20deg);
-    -moz-transform: perspective(2000px) rotateY(20deg);
-    -ms-transform: perspective(2000px) rotateY(20deg);
-    -o-transform: perspective(2000px) rotateY(20deg);
-    transform: perspective(2000px) rotateY(20deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-    -moz-transform: perspective(2000px) rotateY(0);
-    -ms-transform: perspective(2000px) rotateY(0);
-    -o-transform: perspective(2000px) rotateY(0);
-    transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(-180deg);
+        -moz-transform: perspective(2000px) rotateY(-180deg);
+        -ms-transform: perspective(2000px) rotateY(-180deg);
+        -o-transform: perspective(2000px) rotateY(-180deg);
+        transform: perspective(2000px) rotateY(-180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(20deg);
+        -moz-transform: perspective(2000px) rotateY(20deg);
+        -ms-transform: perspective(2000px) rotateY(20deg);
+        -o-transform: perspective(2000px) rotateY(20deg);
+        transform: perspective(2000px) rotateY(20deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+        -moz-transform: perspective(2000px) rotateY(0);
+        -ms-transform: perspective(2000px) rotateY(0);
+        -o-transform: perspective(2000px) rotateY(0);
+        transform: perspective(2000px) rotateY(0);
+    }
 }
+
 @-webkit-keyframes cd-rotate-back {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(-200deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(-180deg);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(-200deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(-180deg);
+    }
 }
+
 @-moz-keyframes cd-rotate-back {
-  0% {
-    -moz-transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -moz-transform: perspective(2000px) rotateY(-200deg);
-  }
-  100% {
-    -moz-transform: perspective(2000px) rotateY(-180deg);
-  }
+    0% {
+        -moz-transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -moz-transform: perspective(2000px) rotateY(-200deg);
+    }
+    100% {
+        -moz-transform: perspective(2000px) rotateY(-180deg);
+    }
 }
+
 @keyframes cd-rotate-back {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-    -moz-transform: perspective(2000px) rotateY(0);
-    -ms-transform: perspective(2000px) rotateY(0);
-    -o-transform: perspective(2000px) rotateY(0);
-    transform: perspective(2000px) rotateY(0);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(-200deg);
-    -moz-transform: perspective(2000px) rotateY(-200deg);
-    -ms-transform: perspective(2000px) rotateY(-200deg);
-    -o-transform: perspective(2000px) rotateY(-200deg);
-    transform: perspective(2000px) rotateY(-200deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(-180deg);
-    -moz-transform: perspective(2000px) rotateY(-180deg);
-    -ms-transform: perspective(2000px) rotateY(-180deg);
-    -o-transform: perspective(2000px) rotateY(-180deg);
-    transform: perspective(2000px) rotateY(-180deg);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+        -moz-transform: perspective(2000px) rotateY(0);
+        -ms-transform: perspective(2000px) rotateY(0);
+        -o-transform: perspective(2000px) rotateY(0);
+        transform: perspective(2000px) rotateY(0);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(-200deg);
+        -moz-transform: perspective(2000px) rotateY(-200deg);
+        -ms-transform: perspective(2000px) rotateY(-200deg);
+        -o-transform: perspective(2000px) rotateY(-200deg);
+        transform: perspective(2000px) rotateY(-200deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(-180deg);
+        -moz-transform: perspective(2000px) rotateY(-180deg);
+        -ms-transform: perspective(2000px) rotateY(-180deg);
+        -o-transform: perspective(2000px) rotateY(-180deg);
+        transform: perspective(2000px) rotateY(-180deg);
+    }
 }
+
 @-webkit-keyframes cd-rotate-inverse-back {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(-20deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(-20deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+    }
 }
+
 @-moz-keyframes cd-rotate-inverse-back {
-  0% {
-    -moz-transform: perspective(2000px) rotateY(180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -moz-transform: perspective(2000px) rotateY(-20deg);
-  }
-  100% {
-    -moz-transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -moz-transform: perspective(2000px) rotateY(180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -moz-transform: perspective(2000px) rotateY(-20deg);
+    }
+    100% {
+        -moz-transform: perspective(2000px) rotateY(0);
+    }
 }
+
 @keyframes cd-rotate-inverse-back {
-  0% {
-    -webkit-transform: perspective(2000px) rotateY(180deg);
-    -moz-transform: perspective(2000px) rotateY(180deg);
-    -ms-transform: perspective(2000px) rotateY(180deg);
-    -o-transform: perspective(2000px) rotateY(180deg);
-    transform: perspective(2000px) rotateY(180deg);
-  }
-  70% {
-    /* this creates the bounce effect */
-    -webkit-transform: perspective(2000px) rotateY(-20deg);
-    -moz-transform: perspective(2000px) rotateY(-20deg);
-    -ms-transform: perspective(2000px) rotateY(-20deg);
-    -o-transform: perspective(2000px) rotateY(-20deg);
-    transform: perspective(2000px) rotateY(-20deg);
-  }
-  100% {
-    -webkit-transform: perspective(2000px) rotateY(0);
-    -moz-transform: perspective(2000px) rotateY(0);
-    -ms-transform: perspective(2000px) rotateY(0);
-    -o-transform: perspective(2000px) rotateY(0);
-    transform: perspective(2000px) rotateY(0);
-  }
+    0% {
+        -webkit-transform: perspective(2000px) rotateY(180deg);
+        -moz-transform: perspective(2000px) rotateY(180deg);
+        -ms-transform: perspective(2000px) rotateY(180deg);
+        -o-transform: perspective(2000px) rotateY(180deg);
+        transform: perspective(2000px) rotateY(180deg);
+    }
+    70% {
+        /* this creates the bounce effect */
+        -webkit-transform: perspective(2000px) rotateY(-20deg);
+        -moz-transform: perspective(2000px) rotateY(-20deg);
+        -ms-transform: perspective(2000px) rotateY(-20deg);
+        -o-transform: perspective(2000px) rotateY(-20deg);
+        transform: perspective(2000px) rotateY(-20deg);
+    }
+    100% {
+        -webkit-transform: perspective(2000px) rotateY(0);
+        -moz-transform: perspective(2000px) rotateY(0);
+        -ms-transform: perspective(2000px) rotateY(0);
+        -o-transform: perspective(2000px) rotateY(0);
+        transform: perspective(2000px) rotateY(0);
+    }
 }
+
 /*Pricing Style*/
-.pricing-box{
+.pricing-box {
     background-color: #fff;
     padding: 30px;
-   -webkit-box-shadow: 0px 50px 100px 0px rgba(60, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
+    -webkit-box-shadow: 0px 50px 100px 0px rgba(60, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
     box-shadow: 0px 50px 100px 0px rgba(60, 1, 4, 0.1), 0px -6px 0px 0px rgba(248, 99, 107, 0.004);
     border-radius: 5px;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
+
 .pricing-box.premium .pricing-head h3,
 .pricing-box.premium .pricing-list li,
-.pricing-box.premium .pricing-head span{
+.pricing-box.premium .pricing-head span {
     color: #fff;
 }
-.pricing-head{
+
+.pricing-head {
     border-bottom: 2px solid #eee;
     padding-bottom: 15px;
 }
-.pricing-head img{
+
+.pricing-head img {
     margin-bottom: 20px;
 }
-.pricing-head h3{
+
+.pricing-head h3 {
     font-size: 42px;
     line-height: 42px;
     margin: 0;
     font-weight: 500;
 }
-.pricing-head span{
-    font-family: "Work Sans",sans-serif;
+
+.pricing-head span {
+    font-family: "Work Sans", sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
-    
+
 }
-.pricing-list{
+
+.pricing-list {
     margin: 20px 0;
     list-style-type: circle;
 }
-.pricing-list li{
+
+.pricing-list li {
     line-height: 30px;
     font-weight: 500;
-    font-family: "Poppins",sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     letter-spacing: -0.2px;
 }
-.pricing-footer .default-btn.btn-blue{
+
+.pricing-footer .default-btn.btn-blue {
     box-shadow: none;
     width: 100%;
 }
+
 /*price-tag
 =============*/
-.price-tag{
+.price-tag {
     background-color: #05144D;
     padding: 10px 20px;
     color: #fff;
-    font-family: "Work Sans",sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
